@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 
-class Main extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
 
@@ -14,7 +14,7 @@ class Main extends Component {
     }
     render() {
         return (
-            <div className="App">
+            <div className="grid">
                 <Grid data={this.state.data}>
                     <GridColumn field="ProductName" title="Product name" />
                     <GridColumn field="Price" />
@@ -24,4 +24,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Home;
