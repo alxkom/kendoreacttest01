@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kendoreacttest01/static/css/main.34de6062.chunk.css",
+    "main.js": "/kendoreacttest01/static/js/main.f1cbb589.chunk.js",
+    "main.js.map": "/kendoreacttest01/static/js/main.f1cbb589.chunk.js.map",
+    "runtime~main.js": "/kendoreacttest01/static/js/runtime~main.3fd6899e.js",
+    "runtime~main.js.map": "/kendoreacttest01/static/js/runtime~main.3fd6899e.js.map",
+    "static/css/2.052b7b7b.chunk.css": "/kendoreacttest01/static/css/2.052b7b7b.chunk.css",
+    "static/js/2.d96be384.chunk.js": "/kendoreacttest01/static/js/2.d96be384.chunk.js",
+    "static/js/2.d96be384.chunk.js.map": "/kendoreacttest01/static/js/2.d96be384.chunk.js.map",
+    "index.html": "/kendoreacttest01/index.html",
+    "precache-manifest.214a25619e8e3e536a3bdfc99915b812.js": "/kendoreacttest01/precache-manifest.214a25619e8e3e536a3bdfc99915b812.js",
+    "service-worker.js": "/kendoreacttest01/service-worker.js",
+    "static/css/2.052b7b7b.chunk.css.map": "/kendoreacttest01/static/css/2.052b7b7b.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/kendoreacttest01/static/css/main.34de6062.chunk.css.map"
+  }
+}
