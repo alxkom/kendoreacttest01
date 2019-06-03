@@ -4,7 +4,7 @@ import {
     Switch, Route
 } from 'react-router-dom';
 
-import Home from './views/Home';
+import DefaultLayout from './views/layouts/DefaultLayout';
 
 import 'bootstrap/dist/js/bootstrap.bundle'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,7 +18,13 @@ class App extends Component {
     }
     render() {
         return (
-            <Home />
+            <Router>
+                <div className="App">
+                    <Switch>
+                        <Route path="*" component={DefaultLayout} />
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }
