@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-import '@progress/kendo-theme-material/dist/all.css';
+import {
+    BrowserRouter as Router,
+    Switch, Route
+} from 'react-router-dom';
 
-import { Grid, GridColumn } from '@progress/kendo-react-grid';
+import DefaultLayout from './views/layouts/DefaultLayout';
+
+import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap/dist/css/bootstrap.css';
+import '@progress/kendo-theme-material/dist/all.css';
 
 class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            data: [
-                { ProductName: "Chai", Price: 10 },
-                { ProductName: "Chang", Price: 20 }
-            ]
-        }
+        this.state = {};
     }
     render() {
         return (
-            <div className="App">
-                <Grid data={this.state.data}>
-                    <GridColumn field="ProductName" title="Product name" />
-                    <GridColumn field="Price" />
-                </Grid>
-            </div>
+            <Router>
+                <div className="App">
+                    <Switch>
+                        <Route path="/" component={DefaultLayout} />
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }
