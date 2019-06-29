@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DropZone from '../components/DropZone'
 
 class ImageParser extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ImageParser extends Component {
     handleFileChange(selectedFiles) {
         console.clear();
 
-        if (selectedFiles.length === 0) {
+        if (selectedFiles.length < 1) {
             return;
         }
 
@@ -42,6 +43,7 @@ class ImageParser extends Component {
         return new Promise((resolve, reject) => {
             reader.onerror = () => { reader.abort(); reject(new Error("Error parsing file")); }
             reader.onloadend = function(e) {
+                console.log("Image data for preview: " + reader.result);
                 resolve({
                     imageData: reader.result
                 });
@@ -57,6 +59,7 @@ class ImageParser extends Component {
             reader.onload = function() {
                 let bytes = Array.from(new Uint8Array(this.result));
                 let base64StringFile = btoa(bytes.map((item) => String.fromCharCode(item)).join(""));
+                console.log("base64 String File: " + base64StringFile);
                 resolve({
                     sizeInBytes: bytes.length,
                     base64StringFile: base64StringFile,
@@ -116,7 +119,9 @@ class ImageParser extends Component {
         return (
             <div className="img-parser-area">
                 <input id="file-input" type="file" onChange={(e) => this.handleFileChange(e.target.files)} />
-                <br /><br /><br />
+                <br /><br />
+                <DropZone onFilesAdded={(files) => this.handleFileChange(files)} />
+                <br /><br />
                 {this.state.imagePreview && (
                     <div className="image-preview">
                         {this.state.jsonFile && (
