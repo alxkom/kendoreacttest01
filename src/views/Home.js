@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
+import ImageParser from '../components/ImageParser'
 
 class Home extends Component {
     constructor(props) {
@@ -19,6 +20,9 @@ class Home extends Component {
                     <GridColumn field="ProductName" title="Product name" />
                     <GridColumn field="Price" />
                 </Grid>
+                <br />
+                <br />
+                <ImageParser></ImageParser>
             </div>
         );
     }
