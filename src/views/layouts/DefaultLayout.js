@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 //import logo from './logo.svg';
 
 import jquery from "jquery";
@@ -59,6 +59,7 @@ const LayoutDefault = (props) => (
                         <Route exact path='/kendoreacttest01' component={Services} />
                         <Route exact path='/services' component={Services} />
                         <Route exact path='/contacts' component={Contacts} />
+                        <Redirect from="/*" to="/" />
                     </Switch>
                 </div>
             </div>
