@@ -56,6 +56,7 @@ const LayoutDefault = (props) => (
                     <h1>Public Place</h1>
                     <Switch>
                         <Route exact path='/' component={Services} />
+                        <Route exact path='/kendoreacttest01' component={Services} />
                         <Route exact path='/services' component={Services} />
                         <Route exact path='/contacts' component={Contacts} />
                         <Redirect from="/*" to="/" />
