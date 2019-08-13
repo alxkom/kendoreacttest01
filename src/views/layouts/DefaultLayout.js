@@ -53,7 +53,6 @@ const LayoutDefault = (props) => (
                 </nav>
 
                 <div className="container-fluid">
-                    <h1>Public Place</h1>
                     <Switch>
                         <Route exact path='/' component={Services} />
                         <Route exact path='/kendoreacttest01' component={Services} />

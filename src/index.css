@@ -201,3 +201,12 @@ code {
 .FileInput {
     display: none;
 }
+
+.position-absolute {
+    position: absolute;
+}
+
+area:link, area:hover, area:active, area:focus {
+    border: 2px solid #00f !important;
+    display: block !important;
+}
