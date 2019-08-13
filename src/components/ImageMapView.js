@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ImageMapper from 'react-image-mapper';
 import ReactTooltip from 'react-tooltip';
-import _map from 'lodash/map';
 import _forEach from 'lodash/forEach';
 import jquery from "jquery";
 
@@ -47,8 +46,8 @@ class ImageMapView extends Component {
                         shape: "poly",
                         coords: [525, 350, 599, 330, 663, 387, 645, 486, 561, 509, 504, 459, 497, 384],
                         href: "#",
-                        lineWidth: "4",
-                        strokeStyle: "orange"
+                        lineWidth: "3",
+                        strokeStyle: "gray"
                     }
                 ]
             }
